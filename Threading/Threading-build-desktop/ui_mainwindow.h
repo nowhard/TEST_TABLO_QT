@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu 3. May 11:45:22 2012
-**      by: Qt User Interface Compiler version 4.7.0
+** Created: Fri 5. Apr 11:25:28 2013
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QCheckBox>
 #include <QtGui/QComboBox>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
@@ -46,6 +47,9 @@ public:
     QLabel *label_2;
     QSlider *horizontalSlider_2;
     QLabel *label_3;
+    QLabel *label_4;
+    QCheckBox *checkBox;
+    QComboBox *comboBox_2;
     QMenuBar *menuBar;
     QMenu *menu;
     QToolBar *mainToolBar;
@@ -96,7 +100,7 @@ public:
         pushButton->setCheckable(false);
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(10, 80, 311, 161));
+        groupBox_2->setGeometry(QRect(10, 80, 311, 171));
         comboBox = new QComboBox(groupBox_2);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(130, 20, 161, 22));
@@ -114,7 +118,7 @@ public:
         label_2->setGeometry(QRect(20, 70, 71, 20));
         horizontalSlider_2 = new QSlider(groupBox_2);
         horizontalSlider_2->setObjectName(QString::fromUtf8("horizontalSlider_2"));
-        horizontalSlider_2->setGeometry(QRect(130, 120, 160, 16));
+        horizontalSlider_2->setGeometry(QRect(130, 100, 160, 16));
         horizontalSlider_2->setMinimum(200);
         horizontalSlider_2->setMaximum(1000);
         horizontalSlider_2->setSingleStep(10);
@@ -122,7 +126,16 @@ public:
         horizontalSlider_2->setOrientation(Qt::Horizontal);
         label_3 = new QLabel(groupBox_2);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(20, 120, 101, 16));
+        label_3->setGeometry(QRect(10, 100, 101, 16));
+        label_4 = new QLabel(groupBox_2);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(10, 130, 101, 16));
+        checkBox = new QCheckBox(groupBox_2);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(130, 130, 71, 18));
+        comboBox_2 = new QComboBox(groupBox_2);
+        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
+        comboBox_2->setGeometry(QRect(190, 130, 101, 22));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -163,6 +176,19 @@ public:
         label->setText(QApplication::translate("MainWindow", "\320\242\320\270\320\277 \320\277\321\200\320\276\321\202\320\276\320\272\320\276\320\273\320\260", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "\320\257\321\200\320\272\320\276\321\201\321\202\321\214", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("MainWindow", "\320\230\320\275\321\202\320\265\321\200\320\262\320\260\320\273 \320\277\320\276\321\201\321\213\320\273\320\272\320\270", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("MainWindow", "\320\227\320\262\321\203\320\272\320\276\320\262\320\276\320\271 \321\201\320\270\320\263\320\275\320\260\320\273", 0, QApplication::UnicodeUTF8));
+        checkBox->setText(QString());
+        comboBox_2->clear();
+        comboBox_2->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 1", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 2", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 3", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 4", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 5", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 6", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 7", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "\320\242\320\270\320\277 8", 0, QApplication::UnicodeUTF8)
+        );
         menu->setTitle(QApplication::translate("MainWindow", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\260", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

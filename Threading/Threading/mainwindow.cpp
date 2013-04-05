@@ -31,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     BLINKING=12;
 
+    SOUND=0x0;
+
     hyst_counter=0;
     point_counter_3=1;
     point_counter_4=1;
@@ -41,7 +43,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ust_form=0;
 
    connect(timer,SIGNAL(timeout()),this,SLOT(Send_To_Tablo()));
-
+    ui->comboBox_2->setEnabled(true);
 
 
      read_flag=false;
@@ -310,7 +312,7 @@ void MainWindow::Send_To_Tablo(void)
     {
          TabloFrame.append(0x1);//канал управления звуком
          TabloFrame.append(0x41);
-         TabloFrame.append((char)0x0);
+         TabloFrame.append(SOUND);
       //   TabloFrame[1]=TabloFrame.length()-2;
          p_uso->SEND_NEW_TABLO_FRAME(TabloFrame);
     }
@@ -390,11 +392,30 @@ else
 }
 
 
-
-
-
-
 void MainWindow::on_horizontalSlider_2_actionTriggered(int action)
 {
     timer->setInterval(ui->horizontalSlider_2->value());
+}
+
+void MainWindow::on_checkBox_clicked()
+{
+    if(ui->checkBox->isChecked()==true)
+    {
+        SOUND=(ui->comboBox_2->currentIndex()*2+1)&0xF;//0xF;
+        ui->comboBox_2->setEnabled(false);
+    }
+    else
+    {
+        SOUND=0x0;
+        ui->comboBox_2->setEnabled(true);
+    }
+}
+
+void MainWindow::on_comboBox_2_currentIndexChanged(int index)
+{
+    if(SOUND!=0)
+    {
+        SOUND=((quint8)index*2+1)&0xF;
+        qDebug()<<"SOUND_CHANGED "<<SOUND;
+    }
 }

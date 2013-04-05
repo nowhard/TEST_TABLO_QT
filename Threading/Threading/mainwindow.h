@@ -81,6 +81,8 @@ quint8 HYST_MAX;// 32
 
 quint8 BLINKING;//	12
 
+quint8 SOUND;
+
 private slots:
 
     void on_horizontalSlider_2_actionTriggered(int action);
@@ -94,6 +96,8 @@ private slots:
     void Send_To_Tablo(void);
 
 
+    void on_checkBox_clicked();
+    void on_comboBox_2_currentIndexChanged(int index);
 };
 
 
