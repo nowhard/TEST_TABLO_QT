@@ -224,7 +224,7 @@ void proto_uso::SEND_NEW_TABLO_FRAME(QByteArray frame)//послать кадр нового прот
     request.append((char)0x0);
     request.append((char)0x8F);
 
-    request.append(frame.length());
+    request.append(frame.length()-3);
     request.append(frame);
     request[5]=request.length()-5;
 
